@@ -1,4 +1,4 @@
-var dest = '../roomcast/interfaces/channel-creation-interface',
+var dest = './dist',
     src = './src',
     mui = './node_modules/material-ui/src';
 
@@ -21,13 +21,9 @@ module.exports = {
     ],
         dest: dest
     },
-    markup: {
-        src: src + "/web/**",
-        dest: dest
-    },
     css: {
         src: src + "/css/**",
-        dest: dest
+        dest: dest + "/css"
     },
     fonts: {
         src: mui + '/less/material-design-fonticons/fonts/**',
@@ -36,6 +32,10 @@ module.exports = {
     muiFonts: {
         src: mui + '/less/material-ui-icons/fonts/**',
         dest: dest + '/fonts'
+    },
+    nutella: {
+        src: './node_modules/nutella_lib/dist/nutella_lib.js',
+        dest: dest
     },
     browserify: {
         // Enable source maps
